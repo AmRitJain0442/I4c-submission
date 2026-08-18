@@ -14,7 +14,7 @@ fi
 gsutil cp gs://kla-restore-tribe-v2/code.tar.gz .
 tar xzf code.tar.gz
 
-pip install -q lpips timm scikit-image
+pip3 install -q lpips timm scikit-image
 
-nohup python train.py --data_root data $1 > train_run.log 2>&1 &
+nohup python3 train.py --data_root data $1 > train_run.log 2>&1 &
 echo "training started: $1"
