@@ -71,6 +71,8 @@ def main():
     p.add_argument("--val_every", type=int, default=5)
     p.add_argument("--workers", type=int, default=4)
     p.add_argument("--compile", action="store_true")
+    p.add_argument("--lr_patch", type=int, default=None,
+                   help="train on random LR crops of this size (e.g. 64 for swinir)")
     args = p.parse_args()
 
     cfg = vars(args)
@@ -81,7 +83,7 @@ def main():
 
     train_ids, val_ids = split_ids(args.data_root)
     print(f"train {len(train_ids)} / val {len(val_ids)}", flush=True)
-    train_ds = PairDataset(args.data_root, train_ids, augment=True)
+    train_ds = PairDataset(args.data_root, train_ids, augment=True, lr_patch=args.lr_patch)
     val_ds = PairDataset(args.data_root, val_ids, augment=False)
     train_dl = DataLoader(train_ds, batch_size=args.batch, shuffle=True,
                           num_workers=args.workers, pin_memory=True, drop_last=True,

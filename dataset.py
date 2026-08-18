@@ -24,18 +24,25 @@ def split_ids(data_root):
 
 
 class PairDataset(Dataset):
-    def __init__(self, data_root, ids, augment=False):
+    def __init__(self, data_root, ids, augment=False, lr_patch=None):
         root = Path(data_root) / "train"
         self.lr = [np.load(root / "NoisyLR" / f"{i}.npy") for i in ids]
         self.gt = [np.load(root / "GT" / f"{i}.npy") for i in ids]
         self.ids = list(ids)
         self.augment = augment
+        self.lr_patch = lr_patch
 
     def __len__(self):
         return len(self.ids)
 
     def __getitem__(self, idx):
         lr, gt = self.lr[idx], self.gt[idx]
+        if self.lr_patch:
+            p = self.lr_patch
+            y = np.random.randint(lr.shape[0] - p + 1)
+            x = np.random.randint(lr.shape[1] - p + 1)
+            lr = lr[y:y + p, x:x + p]
+            gt = gt[2 * y:2 * (y + p), 2 * x:2 * (x + p)]
         if self.augment:
             k = np.random.randint(4)
             if k:
