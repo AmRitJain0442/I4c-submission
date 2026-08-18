@@ -70,6 +70,7 @@ def main():
     p.add_argument("--init_from", default=None, help="warm-start weights (e.g. for LPIPS fine-tune)")
     p.add_argument("--val_every", type=int, default=5)
     p.add_argument("--workers", type=int, default=4)
+    p.add_argument("--compile", action="store_true")
     args = p.parse_args()
 
     cfg = vars(args)
@@ -91,9 +92,15 @@ def main():
     n_params = sum(x.numel() for x in model.parameters())
     print(f"{run}: {n_params/1e6:.2f}M params", flush=True)
 
+    if args.compile:
+        model = torch.compile(model)
+
+    def raw(m):
+        return getattr(m, "_orig_mod", m)
+
     if args.init_from:
         ck = torch.load(args.init_from, map_location="cpu", weights_only=False)
-        model.load_state_dict(ck["model"])
+        raw(model).load_state_dict(ck["model"])
         print(f"warm-started from {args.init_from}", flush=True)
 
     lpips_fn = None
@@ -119,7 +126,7 @@ def main():
     start_epoch, best_psnr = 0, 0.0
     if args.resume and Path(args.resume).exists():
         ck = torch.load(args.resume, map_location="cpu", weights_only=False)
-        model.load_state_dict(ck["model"])
+        raw(model).load_state_dict(ck["model"])
         opt.load_state_dict(ck["opt"])
         sched.load_state_dict(ck["sched"])
         scaler.load_state_dict(ck["scaler"])
@@ -152,13 +159,13 @@ def main():
             msg += f" | val PSNR {psnr:.3f}"
             if psnr > best_psnr:
                 best_psnr = psnr
-                torch.save({"model": model.state_dict(), "cfg": cfg, "epoch": epoch,
+                torch.save({"model": raw(model).state_dict(), "cfg": cfg, "epoch": epoch,
                             "val_psnr": psnr}, out_dir / "best.pth")
                 msg += " *best*"
         print(msg, flush=True)
         log.write(msg + "\n")
         log.flush()
-        torch.save({"model": model.state_dict(), "opt": opt.state_dict(),
+        torch.save({"model": raw(model).state_dict(), "opt": opt.state_dict(),
                     "sched": sched.state_dict(), "scaler": scaler.state_dict(),
                     "cfg": cfg, "epoch": epoch, "best_psnr": best_psnr},
                    out_dir / "last.pth")
