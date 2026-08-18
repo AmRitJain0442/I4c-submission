@@ -1,0 +1,30 @@
+train 2800 / val 400
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+swinir_d120: 5.16M params
+epoch 0 loss 0.15984 lr 5.22e-05 37s
+epoch 1 loss 0.05101 lr 1.04e-04 36s
+epoch 2 loss 0.05154 lr 1.57e-04 36s
+epoch 3 loss 0.05083 lr 2.09e-04 36s
+epoch 4 loss 0.04670 lr 2.61e-04 36s | val PSNR 24.151 *best*
+epoch 5 loss 0.04127 lr 3.00e-04 36s
+epoch 6 loss 0.03798 lr 3.00e-04 36s
+epoch 7 loss 0.03617 lr 3.00e-04 36s
+epoch 8 loss 0.03500 lr 3.00e-04 36s
+epoch 9 loss 0.03400 lr 3.00e-04 36s | val PSNR 26.982 *best*
+epoch 10 loss 0.03331 lr 2.99e-04 36s
+epoch 11 loss 0.03289 lr 2.99e-04 36s
+epoch 12 loss 0.03300 lr 2.99e-04 36s
+epoch 13 loss 0.03227 lr 2.99e-04 36s
+epoch 14 loss 0.03211 lr 2.98e-04 36s | val PSNR 27.226 *best*
+epoch 15 loss 0.03200 lr 2.98e-04 36s
+epoch 16 loss 0.03166 lr 2.98e-04 36s
+epoch 17 loss 0.03170 lr 2.97e-04 36s
+epoch 18 loss 0.03136 lr 2.97e-04 36s
+epoch 19 loss 0.03150 lr 2.96e-04 36s | val PSNR 27.344 *best*
+epoch 20 loss 0.03129 lr 2.95e-04 36s
+epoch 21 loss 0.03124 lr 2.95e-04 36s
+epoch 22 loss 0.03109 lr 2.94e-04 36s
+epoch 23 loss 0.03107 lr 2.94e-04 36s
+epoch 24 loss 0.03079 lr 2.93e-04 36s | val PSNR 27.449 *best*
+epoch 25 loss 0.03089 lr 2.92e-04 36s
+epoch 26 loss 0.03088 lr 2.91e-04 36s

@@ -1,0 +1,23 @@
+train 2800 / val 400
+nafnet_w64b32: 1.13M params
+epoch 0 loss 0.07024 lr 5.22e-05 42s
+epoch 1 loss 0.04128 lr 1.04e-04 41s
+epoch 2 loss 0.04071 lr 1.57e-04 40s
+epoch 3 loss 0.04087 lr 2.09e-04 41s
+epoch 4 loss 0.04163 lr 2.61e-04 41s | val PSNR 25.307 *best*
+epoch 5 loss 0.04285 lr 3.00e-04 41s
+epoch 6 loss 0.04149 lr 3.00e-04 41s
+epoch 7 loss 0.04066 lr 3.00e-04 41s
+epoch 8 loss 0.04022 lr 3.00e-04 41s
+epoch 9 loss 0.03898 lr 2.99e-04 41s | val PSNR 25.779 *best*
+epoch 10 loss 0.03799 lr 2.99e-04 41s
+epoch 11 loss 0.03653 lr 2.99e-04 41s
+epoch 12 loss 0.03532 lr 2.98e-04 41s
+epoch 13 loss 0.03452 lr 2.98e-04 41s
+epoch 14 loss 0.03387 lr 2.97e-04 41s | val PSNR 26.548 *best*
+epoch 15 loss 0.03375 lr 2.96e-04 41s
+epoch 16 loss 0.03319 lr 2.96e-04 41s
+epoch 17 loss 0.03308 lr 2.95e-04 41s
+epoch 18 loss 0.03257 lr 2.94e-04 41s
+epoch 19 loss 0.03247 lr 2.93e-04 41s | val PSNR 26.976 *best*
+epoch 20 loss 0.03222 lr 2.92e-04 41s
