@@ -8,3 +8,4 @@ restored/
 *.pth.tmp
 .venv/
 .DS_Store
+docs/gitcommitall_DRYRUN.*
