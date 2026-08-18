@@ -1,0 +1,5 @@
+torch>=2.2
+numpy>=1.24
+scikit-image>=0.21
+lpips==0.1.4
+timm>=0.9
