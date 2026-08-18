@@ -1,0 +1,10 @@
+data/
+*.zip
+__pycache__/
+*.pyc
+checkpoints/
+runs/
+restored/
+*.pth.tmp
+.venv/
+.DS_Store
