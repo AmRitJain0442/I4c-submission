@@ -17,10 +17,9 @@ class LayerNorm2d(nn.Module):
         self.eps = eps
 
     def forward(self, x):
-        mu = x.mean(1, keepdim=True)
-        var = (x - mu).pow(2).mean(1, keepdim=True)
-        x = (x - mu) / torch.sqrt(var + self.eps)
-        return x * self.weight[None, :, None, None] + self.bias[None, :, None, None]
+        x = x.permute(0, 2, 3, 1)
+        x = F.layer_norm(x, (x.shape[-1],), self.weight, self.bias, self.eps)
+        return x.permute(0, 3, 1, 2)
 
 
 class SimpleGate(nn.Module):
