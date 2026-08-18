@@ -202,16 +202,23 @@ def main():
         except KeyError:
             pass
 
-    rows = [
-        ("Model", "PSNR (dB)", "SSIM", "LPIPS", "ms / image"),
-        ("Bicubic x2 (baseline)", fmt(baseline.get("psnr"), "{:.2f}"), fmt(baseline.get("ssim"), "{:.3f}"),
-         fmt(baseline.get("lpips"), "{:.3f}"), "-"),
-        ("NAFNet-SR (1.13M)", fmt(naf.get("psnr"), "{:.2f}"), fmt(naf.get("ssim"), "{:.3f}"),
-         fmt(naf.get("lpips"), "{:.3f}"), fmt(naf.get("ms"), "{:.1f}")),
-        ("SwinIR (5.16M)", fmt(swin.get("psnr"), "{:.2f}"), fmt(swin.get("ssim"), "{:.3f}"),
-         fmt(swin.get("lpips"), "{:.3f}"), fmt(swin.get("ms"), "{:.1f}")),
-    ]
-    tbl = r.shapes.add_table(len(rows), 5, Inches(0.9), Inches(2.3), Inches(11.5), Inches(1.6)).table
+    labels = {"nafnet": "NAFNet-SR (1.13M)",
+              "nafnet_lpips_ft": "NAFNet-SR + LPIPS fine-tune",
+              "swinir": "SwinIR (5.16M)",
+              "swinir_lpips_ft": "SwinIR + LPIPS fine-tune (submitted)"}
+    rows = [("Model", "PSNR (dB)", "SSIM", "LPIPS", "ms / image"),
+            ("Bicubic x2 (baseline)", fmt(baseline.get("psnr"), "{:.2f}"),
+             fmt(baseline.get("ssim"), "{:.3f}"), fmt(baseline.get("lpips"), "{:.3f}"), "-")]
+    bold_rows = {0}
+    for key, label in labels.items():
+        m = models.get(key)
+        if not m:
+            continue
+        if key == winner_name:
+            bold_rows.add(len(rows))
+        rows.append((label, fmt(m.get("psnr"), "{:.2f}"), fmt(m.get("ssim"), "{:.3f}"),
+                     fmt(m.get("lpips"), "{:.3f}"), fmt(m.get("ms"), "{:.1f}")))
+    tbl = r.shapes.add_table(len(rows), 5, Inches(0.9), Inches(2.15), Inches(11.5), Inches(2.0)).table
     tbl.columns[0].width = Inches(3.9)
     for ci in range(1, 5):
         tbl.columns[ci].width = Inches(1.9)
@@ -220,18 +227,20 @@ def main():
             cell = tbl.cell(ri, ci)
             cell.text = str(val)
             para = cell.text_frame.paragraphs[0]
-            para.runs[0].font.size = Pt(12 if ri == 0 else 11)
-            para.runs[0].font.bold = ri == 0 or (res.get("winner") == "nafnet" and ri == 2) \
-                or (res.get("winner") == "swinir" and ri == 3)
+            para.runs[0].font.size = Pt(11 if ri == 0 else 10)
+            para.runs[0].font.bold = ri in bold_rows
 
+    note = r.shapes.add_textbox(Inches(0.9), Inches(4.15), Inches(11.5), Inches(0.3))
+    ntf = note.text_frame
+    ntf.paragraphs[0].text = ("Validation: 400 held-out pairs. Latency measured on RTX 3060 Laptop; "
+                              "H100 inference is several times faster. Visual: degraded input vs restored vs ground truth.")
+    ntf.paragraphs[0].runs[0].font.size = Pt(10)
     figs = Path("docs/figures")
     if (figs / "training_curves.png").exists():
-        r.shapes.add_picture(str(figs / "training_curves.png"), Inches(0.9), Inches(4.15), width=Inches(5.6))
+        r.shapes.add_picture(str(figs / "training_curves.png"), Inches(0.9), Inches(4.55), width=Inches(5.2))
     comp = sorted(figs.glob("compare_*.png"))
     if comp:
-        r.shapes.add_picture(str(comp[0]), Inches(6.7), Inches(4.3), width=Inches(5.7))
-    if (figs / "metrics_panels.png").exists() and not comp:
-        r.shapes.add_picture(str(figs / "metrics_panels.png"), Inches(6.7), Inches(4.3), width=Inches(5.7))
+        r.shapes.add_picture(str(comp[0]), Inches(6.4), Inches(4.75), width=Inches(6.1))
 
     move_slide(prs, len(prs.slides._sldIdLst) - 1, 7)
 

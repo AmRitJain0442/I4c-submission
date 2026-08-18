@@ -57,11 +57,19 @@ python train.py --model swinir --embed_dim 120 --epochs 300 --batch 16
 
 ## Results (400-image validation set)
 
-| Model | PSNR (dB) | SSIM | LPIPS | ms/img (GPU) |
+| Model | PSNR (dB) | SSIM | LPIPS | ms/img* |
 |---|---|---|---|---|
 | Bicubic ×2 (baseline) | 23.00 | 0.555 | 0.431 | — |
-| NAFNet-SR | TBD | TBD | TBD | TBD |
-| SwinIR | TBD | TBD | TBD | TBD |
+| NAFNet-SR (1.13M) | 27.65 | 0.755 | 0.293 | 42.5 |
+| NAFNet-SR + LPIPS fine-tune | 27.31 | 0.744 | 0.160 | 43.9 |
+| SwinIR (5.16M) | 28.10 | 0.767 | 0.272 | 84.3 |
+| **SwinIR + LPIPS fine-tune (submitted)** | **27.77** | **0.757** | **0.146** | **86.6** |
+
+\*Measured on an RTX 3060 Laptop GPU; H100 inference is several times faster.
+
+The submitted checkpoint (`weights/best.pth`) is SwinIR trained 200 epochs with
+Charbonnier loss, then fine-tuned 25 epochs with Charbonnier + 0.05×LPIPS —
+best perceptual quality (LPIPS −66% vs baseline) at near-best PSNR/SSIM.
 
 ## Repository contents
 

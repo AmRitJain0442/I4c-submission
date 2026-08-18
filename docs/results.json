@@ -4,6 +4,31 @@
     "ssim": 0.5548,
     "lpips": 0.431
   },
-  "models": {},
-  "winner": "TBD"
+  "models": {
+    "nafnet": {
+      "psnr": 27.647,
+      "ssim": 0.7547,
+      "lpips": 0.2929,
+      "ms": 42.5
+    },
+    "swinir": {
+      "psnr": 28.099,
+      "ssim": 0.7675,
+      "lpips": 0.2724,
+      "ms": 84.3
+    },
+    "nafnet_lpips_ft": {
+      "psnr": 27.309,
+      "ssim": 0.7442,
+      "lpips": 0.1604,
+      "ms": 43.9
+    },
+    "swinir_lpips_ft": {
+      "psnr": 27.767,
+      "ssim": 0.7574,
+      "lpips": 0.1458,
+      "ms": 86.6
+    }
+  },
+  "winner": "swinir_lpips_ft"
 }

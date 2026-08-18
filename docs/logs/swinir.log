@@ -28,3 +28,177 @@ epoch 23 loss 0.03107 lr 2.94e-04 36s
 epoch 24 loss 0.03079 lr 2.93e-04 36s | val PSNR 27.449 *best*
 epoch 25 loss 0.03089 lr 2.92e-04 36s
 epoch 26 loss 0.03088 lr 2.91e-04 36s
+epoch 27 loss 0.03076 lr 2.90e-04 36s
+epoch 28 loss 0.03065 lr 2.90e-04 36s
+epoch 29 loss 0.03069 lr 2.89e-04 36s | val PSNR 27.603 *best*
+epoch 30 loss 0.03062 lr 2.88e-04 36s
+epoch 31 loss 0.03051 lr 2.87e-04 36s
+epoch 32 loss 0.03063 lr 2.86e-04 36s
+epoch 33 loss 0.03053 lr 2.85e-04 36s
+epoch 34 loss 0.03040 lr 2.84e-04 36s | val PSNR 27.625 *best*
+epoch 35 loss 0.03030 lr 2.82e-04 36s
+epoch 36 loss 0.03051 lr 2.81e-04 36s
+epoch 37 loss 0.03025 lr 2.80e-04 36s
+epoch 38 loss 0.03040 lr 2.79e-04 36s
+epoch 39 loss 0.03047 lr 2.78e-04 36s | val PSNR 27.597
+epoch 40 loss 0.03019 lr 2.76e-04 36s
+epoch 41 loss 0.03011 lr 2.75e-04 36s
+epoch 42 loss 0.03021 lr 2.74e-04 36s
+epoch 43 loss 0.03032 lr 2.72e-04 36s
+epoch 44 loss 0.03031 lr 2.71e-04 36s | val PSNR 27.704 *best*
+epoch 45 loss 0.03006 lr 2.69e-04 36s
+epoch 46 loss 0.03024 lr 2.68e-04 36s
+epoch 47 loss 0.03020 lr 2.66e-04 36s
+epoch 48 loss 0.03024 lr 2.65e-04 36s
+epoch 49 loss 0.03022 lr 2.63e-04 36s | val PSNR 27.561
+epoch 50 loss 0.03004 lr 2.62e-04 36s
+epoch 51 loss 0.02980 lr 2.60e-04 36s
+epoch 52 loss 0.02991 lr 2.58e-04 36s
+epoch 53 loss 0.02979 lr 2.57e-04 36s
+epoch 54 loss 0.02987 lr 2.55e-04 36s | val PSNR 27.659
+epoch 55 loss 0.02993 lr 2.53e-04 36s
+epoch 56 loss 0.02994 lr 2.51e-04 36s
+epoch 57 loss 0.02958 lr 2.50e-04 36s
+epoch 58 loss 0.02998 lr 2.48e-04 36s
+epoch 59 loss 0.02972 lr 2.46e-04 36s | val PSNR 27.602
+epoch 60 loss 0.02988 lr 2.44e-04 36s
+epoch 61 loss 0.02972 lr 2.42e-04 36s
+epoch 62 loss 0.02977 lr 2.40e-04 36s
+epoch 63 loss 0.02974 lr 2.38e-04 36s
+epoch 64 loss 0.02973 lr 2.36e-04 36s | val PSNR 27.655
+epoch 65 loss 0.02975 lr 2.34e-04 36s
+epoch 66 loss 0.02963 lr 2.32e-04 36s
+epoch 67 loss 0.02967 lr 2.30e-04 36s
+epoch 68 loss 0.02970 lr 2.28e-04 36s
+epoch 69 loss 0.02963 lr 2.26e-04 36s | val PSNR 27.817 *best*
+epoch 70 loss 0.02960 lr 2.24e-04 36s
+epoch 71 loss 0.02951 lr 2.22e-04 36s
+epoch 72 loss 0.02941 lr 2.20e-04 36s
+epoch 73 loss 0.02951 lr 2.18e-04 36s
+epoch 74 loss 0.02948 lr 2.15e-04 36s | val PSNR 27.853 *best*
+epoch 75 loss 0.02940 lr 2.13e-04 36s
+epoch 76 loss 0.02954 lr 2.11e-04 36s
+epoch 77 loss 0.02952 lr 2.09e-04 36s
+epoch 78 loss 0.02945 lr 2.06e-04 36s
+epoch 79 loss 0.02950 lr 2.04e-04 36s | val PSNR 27.868 *best*
+epoch 80 loss 0.02946 lr 2.02e-04 36s
+epoch 81 loss 0.02948 lr 2.00e-04 36s
+epoch 82 loss 0.02945 lr 1.97e-04 36s
+epoch 83 loss 0.02946 lr 1.95e-04 36s
+epoch 84 loss 0.02921 lr 1.93e-04 36s | val PSNR 27.873 *best*
+epoch 85 loss 0.02954 lr 1.90e-04 36s
+epoch 86 loss 0.02951 lr 1.88e-04 36s
+epoch 87 loss 0.02918 lr 1.86e-04 36s
+epoch 88 loss 0.02933 lr 1.83e-04 36s
+epoch 89 loss 0.02923 lr 1.81e-04 36s | val PSNR 27.909 *best*
+epoch 90 loss 0.02930 lr 1.79e-04 36s
+epoch 91 loss 0.02929 lr 1.76e-04 36s
+epoch 92 loss 0.02925 lr 1.74e-04 36s
+epoch 93 loss 0.02937 lr 1.71e-04 36s
+epoch 94 loss 0.02921 lr 1.69e-04 36s | val PSNR 27.894
+epoch 95 loss 0.02927 lr 1.67e-04 36s
+epoch 96 loss 0.02917 lr 1.64e-04 36s
+epoch 97 loss 0.02917 lr 1.62e-04 36s
+epoch 98 loss 0.02927 lr 1.59e-04 36s
+epoch 99 loss 0.02920 lr 1.57e-04 36s | val PSNR 27.971 *best*
+epoch 100 loss 0.02919 lr 1.55e-04 36s
+epoch 101 loss 0.02916 lr 1.52e-04 36s
+epoch 102 loss 0.02922 lr 1.50e-04 36s
+epoch 103 loss 0.02911 lr 1.47e-04 36s
+epoch 104 loss 0.02914 lr 1.45e-04 36s | val PSNR 28.010 *best*
+epoch 105 loss 0.02912 lr 1.42e-04 36s
+epoch 106 loss 0.02910 lr 1.40e-04 36s
+epoch 107 loss 0.02918 lr 1.38e-04 36s
+epoch 108 loss 0.02920 lr 1.35e-04 36s
+epoch 109 loss 0.02923 lr 1.33e-04 36s | val PSNR 27.962
+epoch 110 loss 0.02917 lr 1.30e-04 36s
+epoch 111 loss 0.02923 lr 1.28e-04 36s
+epoch 112 loss 0.02900 lr 1.26e-04 36s
+epoch 113 loss 0.02902 lr 1.23e-04 36s
+epoch 114 loss 0.02918 lr 1.21e-04 36s | val PSNR 28.008
+epoch 115 loss 0.02914 lr 1.18e-04 36s
+epoch 116 loss 0.02891 lr 1.16e-04 36s
+epoch 117 loss 0.02911 lr 1.14e-04 36s
+epoch 118 loss 0.02899 lr 1.11e-04 36s
+epoch 119 loss 0.02914 lr 1.09e-04 36s | val PSNR 27.996
+epoch 120 loss 0.02901 lr 1.07e-04 36s
+epoch 121 loss 0.02899 lr 1.04e-04 36s
+epoch 122 loss 0.02897 lr 1.02e-04 36s
+epoch 123 loss 0.02899 lr 9.97e-05 36s
+epoch 124 loss 0.02902 lr 9.75e-05 36s | val PSNR 28.016 *best*
+epoch 125 loss 0.02921 lr 9.52e-05 36s
+epoch 126 loss 0.02906 lr 9.29e-05 36s
+epoch 127 loss 0.02895 lr 9.07e-05 36s
+epoch 128 loss 0.02885 lr 8.85e-05 36s
+epoch 129 loss 0.02897 lr 8.63e-05 36s | val PSNR 28.018 *best*
+epoch 130 loss 0.02889 lr 8.41e-05 36s
+epoch 131 loss 0.02890 lr 8.19e-05 36s
+epoch 132 loss 0.02907 lr 7.98e-05 36s
+epoch 133 loss 0.02892 lr 7.76e-05 36s
+epoch 134 loss 0.02894 lr 7.55e-05 36s | val PSNR 28.043 *best*
+epoch 135 loss 0.02891 lr 7.34e-05 36s
+epoch 136 loss 0.02903 lr 7.14e-05 36s
+epoch 137 loss 0.02900 lr 6.93e-05 36s
+epoch 138 loss 0.02878 lr 6.73e-05 36s
+epoch 139 loss 0.02901 lr 6.52e-05 36s | val PSNR 28.041
+epoch 140 loss 0.02881 lr 6.33e-05 36s
+epoch 141 loss 0.02871 lr 6.13e-05 36s
+epoch 142 loss 0.02880 lr 5.93e-05 36s
+epoch 143 loss 0.02889 lr 5.74e-05 36s
+epoch 144 loss 0.02887 lr 5.55e-05 36s | val PSNR 28.027
+epoch 145 loss 0.02875 lr 5.37e-05 36s
+epoch 146 loss 0.02872 lr 5.18e-05 36s
+epoch 147 loss 0.02884 lr 5.00e-05 36s
+epoch 148 loss 0.02879 lr 4.82e-05 36s
+epoch 149 loss 0.02886 lr 4.64e-05 36s | val PSNR 28.088 *best*
+epoch 150 loss 0.02873 lr 4.47e-05 36s
+epoch 151 loss 0.02874 lr 4.30e-05 36s
+epoch 152 loss 0.02878 lr 4.13e-05 36s
+epoch 153 loss 0.02900 lr 3.96e-05 36s
+epoch 154 loss 0.02885 lr 3.80e-05 36s | val PSNR 28.078
+epoch 155 loss 0.02876 lr 3.64e-05 36s
+epoch 156 loss 0.02869 lr 3.48e-05 36s
+epoch 157 loss 0.02861 lr 3.33e-05 36s
+epoch 158 loss 0.02883 lr 3.18e-05 36s
+epoch 159 loss 0.02875 lr 3.03e-05 36s | val PSNR 28.065
+epoch 160 loss 0.02888 lr 2.89e-05 36s
+epoch 161 loss 0.02874 lr 2.74e-05 36s
+epoch 162 loss 0.02883 lr 2.61e-05 36s
+epoch 163 loss 0.02847 lr 2.47e-05 36s
+epoch 164 loss 0.02890 lr 2.34e-05 36s | val PSNR 28.096 *best*
+epoch 165 loss 0.02871 lr 2.21e-05 36s
+epoch 166 loss 0.02863 lr 2.09e-05 36s
+epoch 167 loss 0.02863 lr 1.96e-05 36s
+epoch 168 loss 0.02866 lr 1.85e-05 36s
+epoch 169 loss 0.02881 lr 1.73e-05 36s | val PSNR 28.072
+epoch 170 loss 0.02872 lr 1.62e-05 36s
+epoch 171 loss 0.02875 lr 1.51e-05 36s
+epoch 172 loss 0.02872 lr 1.41e-05 36s
+epoch 173 loss 0.02883 lr 1.31e-05 36s
+epoch 174 loss 0.02870 lr 1.21e-05 36s | val PSNR 28.090
+epoch 175 loss 0.02866 lr 1.12e-05 36s
+epoch 176 loss 0.02853 lr 1.03e-05 36s
+epoch 177 loss 0.02873 lr 9.39e-06 36s
+epoch 178 loss 0.02865 lr 8.57e-06 36s
+epoch 179 loss 0.02875 lr 7.78e-06 36s | val PSNR 28.089
+epoch 180 loss 0.02863 lr 7.03e-06 36s
+epoch 181 loss 0.02853 lr 6.31e-06 36s
+epoch 182 loss 0.02880 lr 5.63e-06 36s
+epoch 183 loss 0.02880 lr 4.99e-06 36s
+epoch 184 loss 0.02873 lr 4.39e-06 36s | val PSNR 28.099 *best*
+epoch 185 loss 0.02874 lr 3.83e-06 36s
+epoch 186 loss 0.02857 lr 3.30e-06 36s
+epoch 187 loss 0.02866 lr 2.82e-06 36s
+epoch 188 loss 0.02878 lr 2.37e-06 36s
+epoch 189 loss 0.02861 lr 1.96e-06 36s | val PSNR 28.099 *best*
+epoch 190 loss 0.02878 lr 1.59e-06 36s
+epoch 191 loss 0.02872 lr 1.25e-06 36s
+epoch 192 loss 0.02877 lr 9.60e-07 36s
+epoch 193 loss 0.02860 lr 7.06e-07 36s
+epoch 194 loss 0.02874 lr 4.90e-07 36s | val PSNR 28.097
+epoch 195 loss 0.02866 lr 3.14e-07 36s
+epoch 196 loss 0.02881 lr 1.77e-07 36s
+epoch 197 loss 0.02868 lr 7.85e-08 36s
+epoch 198 loss 0.02860 lr 1.96e-08 36s
+epoch 199 loss 0.02864 lr 0.00e+00 36s | val PSNR 28.097
+done. best val PSNR 28.099

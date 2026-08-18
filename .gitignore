@@ -1,11 +1,13 @@
-data/
+﻿data/
 *.zip
 __pycache__/
 *.pyc
 checkpoints/
 runs/
-restored/
 *.pth.tmp
 .venv/
 .DS_Store
 docs/gitcommitall_DRYRUN.*
+weights/swinir_lpips_last.pth
+weights/swinir_best.pth
+weights/nafnet_lpips_last.pth
