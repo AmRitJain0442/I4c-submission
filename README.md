@@ -59,7 +59,7 @@ python train.py --model swinir --embed_dim 120 --epochs 300 --batch 16
 
 | Model | PSNR (dB) | SSIM | LPIPS | ms/img (GPU) |
 |---|---|---|---|---|
-| Bicubic ×2 (baseline) | 22.49 | 0.523 | — | — |
+| Bicubic ×2 (baseline) | 23.00 | 0.555 | 0.431 | — |
 | NAFNet-SR | TBD | TBD | TBD | TBD |
 | SwinIR | TBD | TBD | TBD | TBD |
 

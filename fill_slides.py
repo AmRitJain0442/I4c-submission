@@ -174,9 +174,9 @@ def main():
              "instead of clipping the input.", anchor_top=True)
     set_text(by_id(inn, 22),
              "CNN-vs-transformer bake-off under one harness, selected on measured PSNR / SSIM / LPIPS "
-             "and per-image latency rather than paper claims. Our validation split exactly mirrors the "
-             "released test distribution with zero training leakage, so reported numbers predict "
-             "benchmark numbers.", anchor_top=True)
+             "and per-image latency rather than paper claims. A strict 400-image held-out validation "
+             "split (never trained on) keeps model selection honest, and the fully-provided degradation "
+             "pairs mean no synthetic-degradation mismatch.", anchor_top=True)
 
     # --- slide 6: impact ---
     imp = s[6]

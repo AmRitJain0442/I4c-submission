@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 
 BLUE, ORANGE, GRAY = "#2a78d6", "#eb6834", "#8a8984"
 INK, MUTED = "#0b0b0b", "#52514e"
-BASELINE_PSNR = 22.49
+BASELINE_PSNR = 23.00
 
 plt.rcParams.update({
     "font.family": "sans-serif", "font.size": 11,

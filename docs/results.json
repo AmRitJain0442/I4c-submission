@@ -1,0 +1,9 @@
+{
+  "baseline": {
+    "psnr": 22.995,
+    "ssim": 0.5548,
+    "lpips": 0.431
+  },
+  "models": {},
+  "winner": "TBD"
+}

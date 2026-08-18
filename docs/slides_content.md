@@ -27,10 +27,9 @@
 ## Slide 4 — Innovation
 - Joint single-pass denoise + SR (no cascaded pipeline) with global bicubic
   residual: network only learns the correction — faster convergence, stable.
-- Exact-metric validation methodology: released test inputs were identified as
-  a subset of the training pairs (CRC-verified), so a clean held-out val split
-  was constructed around them -> model selection on exactly the distribution
-  being scored, with zero leakage into training.
+- Strict held-out validation: 400 training pairs excluded from training and
+  used only for model selection. (Note: released test inputs are NEW scenes,
+  not a subset of train - verified by correlation analysis.)
 - Architecture bake-off under one training harness (CNN vs transformer)
   selected by measured PSNR/SSIM/LPIPS *and* H100-relevant latency.
 - Range-aware handling of speckle overshoot (inputs beyond [0,1] preserved,
